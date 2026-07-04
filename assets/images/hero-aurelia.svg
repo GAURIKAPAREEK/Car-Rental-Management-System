@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1115"/>
+      <stop offset="50%" stop-color="#161A20"/>
+      <stop offset="100%" stop-color="#0F1115"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C4A46B" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#C4A46B" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#C4A46B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="suv" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2027"/>
+      <stop offset="100%" stop-color="#2A313C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <ellipse cx="1200" cy="680" rx="520" ry="80" fill="url(#glow)"/>
+  <path d="M0 780 Q960 720 1920 760 L1920 1080 L0 1080 Z" fill="#161A20" opacity="0.85"/>
+  <g transform="translate(1050 420) scale(2.4)">
+    <path d="M0 95h35l14-38h95l16 38h35l12-30c0-12-10-22-22-22H10c-12 0-22 10-22 22l12 30z" fill="url(#suv)" stroke="#C4A46B" stroke-width="0.8" stroke-opacity="0.35"/>
+    <path d="M22 57h126" stroke="#7D91A8" stroke-width="1.2" stroke-opacity="0.5"/>
+    <rect x="35" y="42" width="28" height="14" rx="2" fill="#0F1115" opacity="0.6"/>
+    <rect x="95" y="42" width="28" height="14" rx="2" fill="#0F1115" opacity="0.6"/>
+    <circle cx="38" cy="95" r="16" fill="#0F1115"/>
+    <circle cx="38" cy="95" r="8" fill="#C4A46B" opacity="0.4"/>
+    <circle cx="158" cy="95" r="16" fill="#0F1115"/>
+    <circle cx="158" cy="95" r="8" fill="#C4A46B" opacity="0.4"/>
+    <path d="M48 57 L58 38 L108 38 L118 57" stroke="#C4A46B" stroke-width="0.6" fill="none" opacity="0.25"/>
+  </g>
+  <rect x="0" y="0" width="820" height="1080" fill="url(#bg)" opacity="0.72"/>
+</svg>
