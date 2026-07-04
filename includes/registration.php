@@ -1,0 +1,94 @@
+<?php
+//error_reporting(0);
+if(isset($_POST['signup']))
+{
+$fname=$_POST['fullname'];
+$email=$_POST['emailid']; 
+$mobile=$_POST['mobileno'];
+$password=md5($_POST['password']); 
+$sql="INSERT INTO  tblusers(FullName,EmailId,ContactNo,Password) VALUES(:fname,:email,:mobile,:password)";
+$query = $dbh->prepare($sql);
+$query->bindParam(':fname',$fname,PDO::PARAM_STR);
+$query->bindParam(':email',$email,PDO::PARAM_STR);
+$query->bindParam(':mobile',$mobile,PDO::PARAM_STR);
+$query->bindParam(':password',$password,PDO::PARAM_STR);
+$query->execute();
+$lastInsertId = $dbh->lastInsertId();
+if($lastInsertId)
+{
+echo "<script>alert('Registration successfull. Now you can login');</script>";
+}
+else 
+{
+echo "<script>alert('Something went wrong. Please try again');</script>";
+}
+}
+
+?>
+
+
+<script>
+function checkAvailability() {
+$("#loaderIcon").show();
+jQuery.ajax({
+url: "check_availability.php",
+data:'emailid='+$("#emailid").val(),
+type: "POST",
+success:function(data){
+$("#user-availability-status").html(data);
+$("#loaderIcon").hide();
+},
+error:function (){}
+});
+}
+</script>
+
+<div class="modal fade" id="signupform">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Create Account</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="signup_wrap">
+            <div class="col-md-12 col-sm-6">
+              <form  method="post" name="signup">
+                <div class="lux-field form-group">
+                  <input type="text" class="form-control" name="fullname" id="signup-fullname" placeholder=" " required="required">
+                  <label for="signup-fullname">Full Name</label>
+                </div>
+                <div class="lux-field form-group">
+                  <input type="text" class="form-control" name="mobileno" id="signup-mobile" placeholder=" " maxlength="10" required="required">
+                  <label for="signup-mobile">Mobile Number</label>
+                </div>
+                <div class="lux-field form-group">
+                  <input type="email" class="form-control" name="emailid" id="emailid" onBlur="checkAvailability()" placeholder=" " required="required">
+                  <label for="emailid">Email Address</label>
+                  <span id="user-availability-status" style="font-size:12px;"></span> 
+                </div>
+                <div class="lux-field form-group lux-password-field">
+                  <input type="password" class="form-control" id="password" name="password" placeholder=" " required="required">
+                  <label for="password">Password</label>
+                  <button type="button" class="lux-password-toggle" aria-label="Toggle password visibility"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                </div>
+                <div class="form-group checkbox">
+                  <input type="checkbox" id="terms_agree" required="required" checked="">
+                  <label for="terms_agree" style="color:var(--dpc-text-muted);font-size:15px;">I Agree with <a href="page.php?type=terms">Terms and Conditions</a></label>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Sign Up" name="signup" id="submit" class="btn btn-block lux-magnetic">
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-center">
+        <p>Already got an account? <a href="#loginform" data-toggle="modal" data-dismiss="modal">Login Here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
