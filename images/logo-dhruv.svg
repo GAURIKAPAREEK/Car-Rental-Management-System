@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 52" fill="none" role="img" aria-label="DHRUV PREMIUM CARS">
+  <style>
+    .dpc-stroke { stroke-dasharray: 140; stroke-dashoffset: 140; animation: dpcDraw 600ms cubic-bezier(0.22,1,0.36,1) 100ms forwards; }
+    .dpc-fill { opacity: 0; animation: dpcFade 600ms cubic-bezier(0.22,1,0.36,1) 300ms forwards; }
+    @keyframes dpcDraw { to { stroke-dashoffset: 0; } }
+    @keyframes dpcFade { to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      .dpc-stroke { stroke-dashoffset: 0; animation: none; }
+      .dpc-fill { opacity: 1; animation: none; }
+    }
+  </style>
+  <g class="dpc-fill">
+    <rect x="0" y="8" width="40" height="36" rx="10" fill="#F1F3F5"/>
+  </g>
+  <path class="dpc-stroke" d="M8 34h5l2.5-7h13l2.5 7h5l2-5.5c0-2.2-1.8-4-4-4H10c-2.2 0-4 1.8-4 4L8 34z" stroke="#244B74" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+  <path class="dpc-stroke" d="M12 27h18" stroke="#B9985A" stroke-width="1.2" stroke-linecap="round"/>
+  <circle class="dpc-fill" cx="15" cy="34" r="2.8" fill="#244B74"/>
+  <circle class="dpc-fill" cx="29" cy="34" r="2.8" fill="#244B74"/>
+  <g class="dpc-fill">
+    <text x="50" y="24" font-family="Georgia, 'Playfair Display', serif" font-size="17" font-weight="600" fill="#1B1B1B">DHRUV</text>
+    <text x="50" y="40" font-family="Arial, Inter, sans-serif" font-size="10.5" font-weight="600" letter-spacing="3.2" fill="#244B74">PREMIUM CARS</text>
+  </g>
+</svg>

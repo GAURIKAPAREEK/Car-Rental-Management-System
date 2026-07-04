@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8F7F4"/>
+      <stop offset="45%" stop-color="#EEF1F4"/>
+      <stop offset="100%" stop-color="#DDE4EA"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8EAED" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#C8D0D8" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#244B74"/>
+      <stop offset="100%" stop-color="#3A6A9A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <ellipse cx="960" cy="920" rx="780" ry="120" fill="url(#road)"/>
+  <path d="M0 720 Q480 680 960 700 T1920 720 L1920 1080 L0 1080 Z" fill="#E4E8EC" opacity="0.5"/>
+  <g transform="translate(1180 520) scale(2.2)">
+    <path d="M0 80h28l12-32h72l14 32h28l10-24c0-10-8-18-18-18H8c-10 0-18 8-18 18l10 24z" fill="url(#carBody)" opacity="0.92"/>
+    <path d="M20 48h96" stroke="#B9985A" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="32" cy="80" r="14" fill="#1B1B1B" opacity="0.85"/>
+    <circle cx="32" cy="80" r="7" fill="#666"/>
+    <circle cx="116" cy="80" r="14" fill="#1B1B1B" opacity="0.85"/>
+    <circle cx="116" cy="80" r="7" fill="#666"/>
+    <path d="M44 48 L52 32 L88 32 L96 48" stroke="#F8F7F4" stroke-width="1.5" fill="none" opacity="0.25"/>
+  </g>
+  <rect x="0" y="0" width="900" height="1080" fill="url(#sky)" opacity="0.55"/>
+</svg>
